@@ -31,3 +31,4 @@ for obj in s3_bucket.objects.all():
     s3.Object(s3_bucket_name, new_path).copy_from(CopySource=s3_bucket_name + '/' + key)
     s3.Object(s3_bucket_name, key).delete()
     print('migrated: ' + key + '->' + new_path)
+
